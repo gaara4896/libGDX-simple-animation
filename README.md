@@ -1,6 +1,6 @@
-# Simple Animation with libGDX
+# Simple Features with libGDX
 
-- Demonstrate how to do animation in both java and scala with libGDX
+- libGDX feature testing in both java and scala with libGDX
 
 ## Tools
 

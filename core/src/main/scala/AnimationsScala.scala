@@ -1,4 +1,4 @@
-package my.game.pkg 
+package my.game.pkg
 
 import com.badlogic.gdx.ApplicationListener
 import com.badlogic.gdx.graphics.g2d.TextureRegion

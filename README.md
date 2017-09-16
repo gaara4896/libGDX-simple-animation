@@ -12,7 +12,7 @@
 
 ### First step
 
-`git clone https://github.com/gaara4896/libGDX-simple-animation.git`
+`git clone https://github.com/gaara4896/libGDX-simple-Features.git`
 
 ### Next
 

@@ -23,6 +23,7 @@ class NinePatchStyle extends ApplicationListener{
 	var button2:TextButton = null
 	var spriteBatch:SpriteBatch = null
 	var stage:Stage = null
+	var font:BitmapFont = null
 
 	override def create{
 		patch = new NinePatch(new Texture(Gdx.files.internal("ninepatches1.png")), 12, 12, 12, 12)
@@ -42,6 +43,8 @@ class NinePatchStyle extends ApplicationListener{
 		stage = new Stage(new ScreenViewport)
 		stage.addActor(button)
 		stage.addActor(button2)
+
+		font = new BitmapFont
 	}
 
 	override def render{
@@ -52,10 +55,16 @@ class NinePatchStyle extends ApplicationListener{
 		spriteBatch.begin
 		patch.draw(spriteBatch, 50, 0, patch.getTotalWidth, patch.getTotalHeight)
 		patchDrawable.draw(spriteBatch, 50, 200, 100, 100)
+		font.draw(spriteBatch, 
+			"Draw from spriteBatch will follow window size, stage will follow true size, resize will affect spriteBatch",
+			0, 400 )
+		font.draw(spriteBatch, "Resize window to get more understanding", 0, 450)
 		spriteBatch.end
 	}
 
-	override def resize(width:Int, Height:Int) {}
+	override def resize(width:Int, height:Int) {
+		stage.getViewport().update(width, height, true);
+	}
 
 	override def pause {}
 

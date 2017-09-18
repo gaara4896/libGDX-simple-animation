@@ -57,8 +57,9 @@ class NinePatchStyle extends ApplicationListener{
 		patchDrawable.draw(spriteBatch, 50, 200, 100, 100)
 		font.draw(spriteBatch, 
 			"Draw from spriteBatch will follow window size, stage will follow true size, resize will affect spriteBatch",
-			0, 400 )
-		font.draw(spriteBatch, "Resize window to get more understanding", 0, 450)
+			0, 450 )
+		font.draw(spriteBatch, "Resize window to get more understanding", 0, 420)
+		font.draw(spriteBatch, "To let them follow screen proportion, use StretchViewport instead", 0, 390)
 		spriteBatch.end
 	}
 
